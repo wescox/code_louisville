@@ -1,0 +1,52 @@
+/*========================================
+BASE STYLE AND LAYOUTS 
+========================================*/
+
+body { 
+    /* I know Treehouse somewhat recommended not doing this, but there was no elaboration.  
+       I couldn't find any reason not to online other than there used to be cross-browser issues long ago that are no longer the case.
+       Based on my research, this seems to be a thing people avoid simply because people used to avoid it rather than needing to avoid it.
+    */
+  background-color: #F0F0F0;
+}
+
+.navbar-light .navbar-brand {
+    color: #53A451;
+    font-size: 1.5em;
+}
+
+.container { /* to create spacing between navbar and content */
+    padding-top: 5em;
+}
+
+
+/*========================================
+NUMBER AND INPUT PAD LAYOUT 
+========================================*/
+
+.num_row {
+    display: flex;
+    flex-direction: row;
+    margin: 1em 0;
+    justify-content: space-around;
+}
+
+.num_btn, .clr_btn, .inp_btn {
+    height: 2.5em;
+}
+
+.num_btn, .clr_btn {
+    width: 30%;
+}
+
+.inp_btn {
+    width: 60%;
+}
+
+p { /* this is used for to add dead space to an empty div so that columns line up */
+    height: 1.5em;
+}
+
+.bdgt_tab {
+    margin: 2em 0 4em 0;
+}

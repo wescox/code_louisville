@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/styles.css">
+        
+        <title>WAM!</title>
+    </head>
+    
+    <body>
+        
+        <!-- Navigation -->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">WAM!</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">BUDGET <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin.html">ADMIN</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="rules.html">RULES</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- / Navigation -->
+        
+        <!-- Home page main content -->
+        <div class="container">
+            <div class="row">
+                
+                <!-- Purchase amount input -->
+                <div class="col-md col-xl-4 order-xl-3 offset-xl-2">
+                    <div class="text-right" id="display" data-budget="1500.00"></div> <!-- budget and input display area updated dynamically by js -->
+                    <div class="num_row">
+                        <button type="button" class="btn btn-outline-success btn-lg num_btn" data-num_btn="1">1</button>
+                        <button type="button" class="btn btn-outline-success btn-lg num_btn" data-num_btn="2">2</button>
+                        <button type="button" class="btn btn-outline-success btn-lg num_btn" data-num_btn="3">3</button>
+                    </div>
+                    <div class="num_row">
+                        <button type="button" class="btn btn-outline-success btn-lg num_btn" data-num_btn="4">4</button>
+                        <button type="button" class="btn btn-outline-success btn-lg num_btn" data-num_btn="5">5</button>
+                        <button type="button" class="btn btn-outline-success btn-lg num_btn" data-num_btn="6">6</button>
+                    </div>
+                    <div class="num_row">
+                        <button type="button" class="btn btn-outline-success btn-lg num_btn" data-num_btn="7">7</button>
+                        <button type="button" class="btn btn-outline-success btn-lg num_btn" data-num_btn="8">8</button>
+                        <button type="button" class="btn btn-outline-success btn-lg num_btn" data-num_btn="9">9</button>
+                    </div>
+                    <div class="num_row">
+                        <button type="button" class="btn btn-outline-success btn-lg clr_btn" id="clr_btn">C</button>
+                        <button type="button" class="btn btn-outline-success btn-lg num_btn" data-num_btn="0">0</button>
+                        <button type="button" class="btn btn-outline-success btn-lg num_btn" data-num_btn=".">.</button>
+                    </div>
+                    <div class="num_row">
+                        <button type="button" class="btn btn-outline-success btn-lg" id="sqr_btn">SQUANDER</button>
+                    </div>
+                </div>
+                <!-- / Purchase amount input -->
+                
+                <!-- Purchase category input -->
+                <div class="col-md col-xl-4 order-xl-4">
+                    <div id="display"><P></P></div> <!-- just empty space so that this section lines up with others --> 
+                    <div class="num_row">
+                        <button type="button" class="btn btn-outline-success btn-lg inp_btn">Groceries</button>
+                    </div>
+                    <div class="num_row">
+                        <button type="button" class="btn btn-outline-success btn-lg inp_btn">Entertainment</button>
+                    </div>
+                    <div class="num_row">
+                        <button type="button" class="btn btn-outline-success btn-lg inp_btn">Pet stuff</button>
+                    </div>
+                    <div class="num_row">
+                        <button type="button" class="btn btn-outline-success btn-lg inp_btn">Gas</button>
+                    </div>
+                    <div class="num_row">
+                        <button type="button" class="btn btn-outline-success btn-lg inp_btn">Home Stuff</button>
+                    </div>
+                </div>
+                <!-- / Purchase category input -->
+                
+                <!-- Spending table -->
+                <div class="col-xl-12 order-xl-1 bdgt_tab">
+                    <div id="display"><P></P></div> <!-- just empty space so that this section lines up with others --> 
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Date</th>
+                                <th scope="col">Amount Spent</th>
+                                <th scope="col">Category</th>
+                                <th scope="col">Spender</th>
+                                <th scope="col">Remaining Budget</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1/1/2019</th>
+                                <td>216.85</td>
+                                <td>Home Stuff</td>
+                                <td>Wes</td>
+                                <td>$1283.15</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1/1/2019</th>
+                                <td>50.67</td>
+                                <td>Groceries</td>
+                                <td>Carol</td>
+                                <td>$1232.48</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1/1/2019</th>
+                                <td>27.50</td>
+                                <td>Gas</td>
+                                <td>Wes</td>
+                                <td>$1232.48</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- / Spending table -->
+                
+                <!-- Budget history table -->
+                <div class="col-xl-12 order-xl-2 d-none d-md-flex bdgt_tab">
+                    <div id="display"><P></P></div> <!-- just empty space so that this section lines up with others --> 
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Month</th>
+                                <th scope="col">Total Spent</th>
+                                <th scope="col">Delta</th>
+                                <th scope="col">Balance</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Jan</th>
+                                <td>$1400.00</td>
+                                <td>$100.00</td>
+                                <td>$100.00</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Feb</th>
+                                <td>$1550.00</td>
+                                <td>$-50</td>
+                                <td>$50</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">March</th>
+                                <td>$1300</td>
+                                <td>$200</td>
+                                <td>$250</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- / Budget history table -->
+                
+            </div> <!-- / row -->
+        </div> <!-- / container -->
+        
+        <!-- Custom JavaScript -->
+        <script src="js/script.js"></script>
+        
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+    
+</html>
